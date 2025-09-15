@@ -1,10 +1,8 @@
-# Título do Projeto
+# LojinhaInfoWeb
 
 <img src="logo.png" width="200" height="200" />
 
->Inserir uma logo para o projeto
-
->Inserir pequena descrição do projeto
+>Pequeno sistema de comércio eletrônico, voltado à comercialização de itens relativos ao curso, tais como: bottons, camisas e adesivos.
 
 # Equipe e Formas de Contato
 
