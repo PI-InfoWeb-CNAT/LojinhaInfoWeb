@@ -92,7 +92,7 @@ TODOS os usuários que irão acessar ao sistema o farão através de um computad
 | :----: | :--: | :-------: | :-------: | :-----------: |
 | NF01 | Implementação em Django/Python | Utilização do framework Django,na linguagem Python | implementação | obrigatório |
 | NF02 | Integração com API PagSeguro | Possibilitar que compras sejam mediadas pela API do PagSeguro | implementação | desejável |
-| NF03 | Criptografia de dados sensíveis | segurança | obrigatório |
-| NF04 | Responsividade para dispositivos móveis | usabilidade | obrigatório |
-| NF05 | Seguir normas de acessibilidade | usabilidade | desejável |
+| NF03 | Criptografia de dados sensíveis | Dados sensíveis relacionados aos usuários serão criptografados no banco de dados | segurança | obrigatório |
+| NF04 | Responsividade para dispositivos móveis | O sistema precisa se adequar à apresentação do mesmo na tela de um dispositivo móvel | usabilidade | obrigatório |
+| NF05 | Seguir normas de acessibilidade | O sistema, por ser Web, deverá seguir as normas internacionais de acessibilidade para a Web | usabilidade | desejável |
 
