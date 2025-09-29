@@ -2,15 +2,16 @@
 
 ## Histórico de Revisões
 
-| Data                |  Versão             |          Descrição  |  Autores            |
-| :-----------------: | :-----------------: | :-----------------: | :-----------------: |
-| 22/09/2025 | 1.0 | Versão inicial | Fellipe Aleixo |
+| Data | Versão | Descrição | Autores |
+| :--: | :----: | :-------: | :-----: |
+| 22/09/25 | 1.0 | Versão inicial |  Fellipe Aleixo |
 | - | - | - |  - |
 
 
 ## 1. Objetivo do projeto
 
-Implementação da um sistema Web que irá servir para comercialização de produtos relacioados ao curso Técnico de Informática para Internet do campus Natal Central do IFRN. Serão comercializados produtos como camisas, canecas, botons, adesivos, etc. Serão ofertados descontos especiais para alunos/servidores ligados ao curso e ao IFRN. 
+Implementação da um sistema Web (exemplo) que irá servir para comercialização de produtos relacioados ao curso Técnico Integrado em Informática para Internet do campus Natal Central do IFRN. Serão comercializados produtos como camisas, bonés, canecas, botons, adesivos, etc. Serão ofertados descontos especiais para alunos/servidores ligados ao curso e ao IFRN. 
+
 
 ## 2. Descrição do problema
 
@@ -41,29 +42,38 @@ Texto...
 
 ## 7. Regras de Negócio
 
-| ID  | Regra | Descrição |
-| :-: | :---: | :-------: |
-| RN01 | Desconto de 40% para alunos de InfoWeb | ... |
-| RN02 | Desconto de 30% para alunos e servidres da DIATINF | ... |
-| RN03 | Desconto de 15% para alunos e servidores do IFRN | ... |
+| ID  | Regra | Dscrição |
+| :-: | :---: | :------: |
+| RN01 | Desconto 40% para alunos InfoWeb | ... |
+| RN02 | Desconto 30% para alunos/servidores DIATINF | ... |
+| RN03 | Desconto 15% para alunos/servidores IFRN | ... |
 | RN04 | Carrinho de compras terá "tempo de vida" de dois dias | ... |
+| RN05 | As reservas  de produtos durarão no máximo duas semanas | ... |
+| RN06 | Operação da fila de espera | Itens reservados que não foram comprados no prazo vão para o primeiro da fila de espera. |
 
 
-## 8. Requisitos funcionais
+## 8. Requisitos Funcionais
 
 | Código | Nome | Descrição | Prioridade |
 | :----: | :--: | :-------: | :--------: |
-| RF01 | Realizar pedidos por meio de um carrinho de compras | ... | ... |
-| RF02 | Catramento de produtos | ... | ... |
-| RF03 | Autenticação de usuários | ... | ... |
-| RF04 | Histórico de compras | ... | ... |
-| RF05 | Visualização e busca de produtos | ... | ... |
-| RF06 | Acompanhamento de entregas | ... | ... |
+| RF01 | Gerenciamento de produtos | ... | ... |
+| RF02 | Cadastro e autenticação de usuários | ... | ... |
+| RF03 | Busca e filtragem de produtos | ... | ... |
+| RF04 | Realizar pedidos por meio de um carrinho de compras | ... | ... |
+| RF05 | Registro de vendas | ... | ... |
+| RF06 | Histórico de compras | ... | ... |
+| RF07 | Gerenciamento de entregas | ... | ... |
+| RF08 | Gerenciamento reserva de produtos | ... | ... |
+| RF09 | Gerenciamento de fila de espera | ... | ... |
 
-## 9. Requisitos não-funcionais
+
+## 9. Requisitos Não-funcionais
 
 | Código | Nome | Descrição | Categoria | Classificação |
 | :----: | :--: | :-------: | :-------: | :-----------: |
-| NF01 | Utilização do framework Django/Python | ... | ... | ... |
-| NF02 | Dados sensíveis do cliente serão protegidos | ... | ... | ... |
-| NF03 | Integração com a API do PagSeguro | ... | ... | ... |
+| NF01 | Implementação em Django/Python | ... | ... | ... |
+| NF02 | Integração com API PagSeguro | ... | ... | ... |
+| NF03 | Criptografia de dados sensíveis | ... | ... |
+| NF04 | Responsividade para dispositivos móveis | ... | ... |
+| NF05 | Seguir normas de acessibilidade | ... | ... |
+| NF06 | Integração com a API do PagSeguro | ... | ... | ... |
