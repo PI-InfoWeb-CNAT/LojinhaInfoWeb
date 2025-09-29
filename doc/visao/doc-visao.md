@@ -81,7 +81,7 @@ TODOS os usuários que irão acessar ao sistema o farão através de um computad
 | RF04 | Carrinho de compras | Possibilidade para os usuáris irem adicionando os produtos do seu interesse em um carrinho de compras virtual | alta |
 | RF05 | Registro de vendas | Possibilidade ao usuário de finalizar a compra dos produtos que adicionou ao carrinho de compras | alta |
 | RF06 | Histórico de compras | Possibilidade para o usuário acessar todas as compras anteriores que realizou no sistema | baixa |
-| RF07 | Gerenciamento de entregas | Gerenciar o processo dos itens adiquiridos por um dado usuário | médio |
+| RF07 | Gerenciamento de entregas | Gerenciar o processo entrega dos itens adiquiridos por um dado usuário | médio |
 | RF08 | Gerenciamento reserva de produtos | Possibilitar que usuários possam reservar produtos, para compra futura | média |
 | RF09 | Gerenciamento de fila de espera | Possibilidade de registrar o interesse de um usuário por um produto que não está disponível (em falta no estoque ou reservado) | média |
 
