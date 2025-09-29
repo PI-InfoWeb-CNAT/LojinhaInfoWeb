@@ -79,7 +79,7 @@ TODOS os usuários que irão acessar ao sistema o farão através de um computad
 | RF02 | Cadastro e autenticação de usuários | Auto-cadastro de usuário, com validação pelo administrador, além de login/logout no sistema | média |
 | RF03 | Busca e filtragem de produtos | Busca de produtos por critérios específicos (nome, categoria, preço, etc.) | alta |
 | RF04 | Carrinho de compras | Possibilidade para os usuáris irem adicionando os produtos do seu interesse em um carrinho de compras virtual | alta |
-| RF05 | Registro de vendas | Possibilidade ao usuário de finalizar a compra dos produtos que adicionou ao carreinho de compras | alta |
+| RF05 | Registro de vendas | Possibilidade ao usuário de finalizar a compra dos produtos que adicionou ao carrinho de compras | alta |
 | RF06 | Histórico de compras | Possibilidade para o usuário acessar todas as compras anteriores que realizou no sistema | baixa |
 | RF07 | Gerenciamento de entregas | Gerenciar o processo dos itens adiquiridos por um dado usuário | médio |
 | RF08 | Gerenciamento reserva de produtos | Possibilitar que usuários possam reservar produtos, para compra futura | média |
