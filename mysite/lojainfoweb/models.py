@@ -14,7 +14,7 @@ class Usuario(models.Model):
     }
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     tipo = models.IntegerField(choices=TIPO, default=9)
-    valido = models.BooleanField(default=False)
+    valido = models.BooleanField('válido', default=False)
     def __str__(self):
         return self.user.username
 
@@ -22,7 +22,7 @@ class Usuario(models.Model):
 #####
 ## 2. Classe Comprador
 class Comprador(Usuario):
-    endereco = models.CharField(maxlength=100)
+    endereco = models.CharField('endereço', maxlength=100)
     def __str__(self):
         return 'Comprador: {}'.format(super())
 
@@ -40,9 +40,9 @@ class Categoria(models.Model):
 class Produto(models.Model):
     nome = models.CharField(max_length=50)
     imagem = models.ImageField(upload_to='produtos')
-    descricao = models.models.CharField(max_length=100)
-    preco = models.DecimalField(max_digits=15, decimal_places=2)
-    quant_estoque = models.IntegerField(default=0)
+    descricao = models.models.CharField('descrição', max_length=100)
+    preco = models.DecimalField('preço', max_digits=15, decimal_places=2)
+    quant_estoque = models.IntegerField('quantidade em estoque', default=0)
     categoria = models.ForeignKey(Categoria, default=None, null=True, on_delete=models.SET_NULL)
     def __str__(self):
         return self.nome
@@ -65,19 +65,35 @@ class FilaReserva(models.Model):
     produto = models.OneToOneField(Produto)
     inicio = models.OneToOneField(Reserva, null=True, blank= True, default=None)
     fim = models.OneToOneField(Reserva, null=True, blank=True, default=None)
+    tamanho = models.IntegerField(default=0)
     def __str__(self):
         return 'Fila de reservas para {}'.format(self.produto.nome)
-    def enfileirar(self, reserva):
-        if self.inicio == None and self.fim == None:
-            self.inicio = reserva
-            self.fim = reserva
-            self.save()
+    def enfileirar(self, nova):
+        if self.fim == None:
+            self.inicio = nova
+            self.fim = nova
         else:
-            self.fim.proximo = reserva
+            self.fim.proximo = nova
             self.fim.save()
-            self.fim = reserva
-            self.save()
-    
+            self.fim = nova
+        self.tamanho += 1
+        self.save()
+    def desenfileirar(self):
+        aux = self.inicio
+        if self.inicio == self.fim:
+            self.inicio = None
+            self.fim = None
+        else:
+            self.inicio = self.inicio.proximo
+        self.save()
+        aux.proximo = None
+        aux.save()
+        self.tamanho -= 1
+        return aux
+    def primeiro(self):
+        return self.inicio
+
+
 #####
 ## 7. Classe Compra
 class Compra(models.Model):
@@ -90,7 +106,7 @@ class Compra(models.Model):
     }
     estado = models.IntegerField(choices=ESTADO, default=1)
     data = models.DateField(auto_now_add=True)
-    comprador = models.ForeignKey(Comprador, null=True, on_delete=models.SET_NULL)
+    comprador = models.ForeignKey(Comprador, null=True, blank=True, on_delete=models.SET_NULL)
     def __str__(self):
         return 'Compra de {} em {}'.format(self.comprador, self.data)
 
