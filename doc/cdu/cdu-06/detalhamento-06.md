@@ -2,42 +2,34 @@
 
 - **Ator principal**: Comprador
 - **Atores secundários**: Não possui	 
-- **Resumo**: O comprador realiza a pré-venda de um produto que ainda não está disponível em estoque. O sistema permite o pagamento antecipado e reserva o item para o comprador, garantindo que o produto seja enviado assim que estiver disponível.
-- **Pré-condição**: O comprador deve estar autenticado no sistema e o produto deve estar disponível para pré-venda.
-- **Pós-Condição**: O pagamento é registrado, o produto é reservado e o comprador recebe a confirmação da pré-venda.
+- **Resumo**: O comprador realiza a pré-reserva de um produto que ainda não está disponível para retirada ou envio imediato. O sistema registra a intenção de reserva e garante que o item será disponibilizado para o comprador assim que houver estoque.
+- **Pré-condição**: O comprador deve estar autenticado no sistema e o produto deve estar liberado para pré-reserva.
+- **Pós-Condição**: A pré-reserva é registrada no sistema, o comprador recebe confirmação da pré-reserva e o sistema posiciona o comprador na fila de reservas.
 
 ## Fluxo Principal
 | Ações do ator | Ações do sistema |
 | :-----------------: | :-----------------: |
 | 0 -  O comprador acessa a página de um produto disponível para pré-venda.| | 
-| 1 - O comprador seleciona a opção “Realizar pré-venda”. | |  
-| | 2 - O sistema solicita as informações de pagamento e confirmação da reserva. | 
-| 3 - O comprador confirma o pagamento antecipado. | | 
-| | 4 - O sistema processa o pagamento. | 
-| 5 - O sistema registra a reserva do produto em nome do comprador. | | 
-| | 6 - O sistema exibe a mensagem de confirmação de pré-venda e o prazo estimado de envio. | 
+| 1 - O comprador confirma a intenção de pré-reserva. | |  
+| | 1.1 - O sistema recupera os dados do produto. | 
+| | 1.2 - O sistema cria o registro de reserva vinculado ao comprador e ao produto. | 
+| | 1.3 - O sistema insere o comprador na fila de reserva. | 
+| | 2 - O sistema exibe mensagem informando que a pré-reserva foi registrada com sucesso. | 
+| 3 - O comprador é redirecionado ao carrinho ou página de reservas. | | 
 
-## Fluxo Alternativo I - Pagamento não autorizado 
+## Fluxo Alternativo I - Produto Indisponível para Pré-Reserva
 | Ações do ator | Ações do sistema |
 | :-----------------: |:-----------------: | 
-| 1.1 - O comprador informa os dados de pagamento, mas a transação não é autorizada. | |  
-| | 1.2 - O sistema exibe mensagem informando que o pagamento não foi aprovado e solicita nova tentativa ou método alternativo. |
+| 1.1 - O comprador tenta pré-reservar um produto que não possui mais vagas de reserva. | |  
+| | 1.2 - O sistema informa que não é mais possível reservar este produto. |
 
 (retorna ao passo 2 do fluxo principal)
 
-## Fluxo Alternativo II - Produto Indisponível para pré-venda
+## Fluxo Alternativo II - Cancelamento da Pré-Reserva pelo Comprador
 | Ações do ator | Ações do sistema |
 | :-----------------: | :-----------------: | 
-| 2.1 - O comprador tenta realizar a pré-venda de um produto que não está mais disponível para reserva. | |  
-| | 2.2 - O sistema exibe mensagem informando que o produto esgotou e não pode mais ser reservado. |  
-
-## Fluxo Alternativo III - Cancelamento pelo comprador
-| Ações do ator | Ações do sistema |
-| :-----------------: | :-----------------: | 
-| 3.1 - O comprador decide cancelar a pré-venda antes do envio do produto. | |  
-| | 3.2 - O sistema registra o cancelamento, atualiza o status do pedido e agenda o estorno do pagamento conforme as políticas da loja. |  
-
-> Obs. as seções a seguir apenas serão utilizadas na segunda unidade do PDSWeb (segundo orientações do gerente do projeto).
+| 2.1 - O comprador solicita o cancelamento da pré-reserva antes da disponibilidade do produto. | |  
+| | 2.2 - O sistema remove o comprador da fila e atualiza o status da reserva. |   
 
 ## Diagrama de Interação (Sequência ou Comunicação)
 
