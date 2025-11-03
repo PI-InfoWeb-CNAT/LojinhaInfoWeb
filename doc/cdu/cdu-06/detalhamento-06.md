@@ -45,4 +45,5 @@
 
 ## Diagrama de Classes de Projeto
 
-> Substituir pela imagem contendo as classes (modelo, visão e templates) que implementam o respectivo CDU...
+> <img width="482" height="320" alt="cdu 006" src="https://github.com/user-attachments/assets/8ae4d66f-2e0b-4eb9-ab9d-47f576601a1a" />
+
