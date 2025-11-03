@@ -19,7 +19,8 @@
 
 ## Fluxo Alternativo I - Pagamento não autorizado 
 | Ações do ator | Ações do sistema |
-| :-----------------: |:-----------------: | | 1.1 - O comprador informa os dados de pagamento, mas a transação não é autorizada. | |  
+| :-----------------: |:-----------------: | 
+| 1.1 - O comprador informa os dados de pagamento, mas a transação não é autorizada. | |  
 | | 1.2 - O sistema exibe mensagem informando que o pagamento não foi aprovado e solicita nova tentativa ou método alternativo. |
 
 (retorna ao passo 2 do fluxo principal)
