@@ -1,35 +1,34 @@
-# CDU002. Nome... 
+# CDU 05. Favoritar produto 
 
-- **Ator principal**: ...
-- **Atores secundários**: ...	 
-- **Resumo**: ...
-- **Pré-condição**: ...
-- **Pós-Condição**: ...
+- **Ator principal**: Comprador.
+- **Atores secundários**: não possui.	 
+- **Resumo**: O comprador sinaliza um dos produtos oferecidos na lojinha como um dos seus favoritos. Sendo o mesmo listado, a partir desse momento, em uma lista diferenciada e sendo localizado mais facilmente. 
+- **Pré-condição**: Produto devidamente cadastrado e comprador devidamente autenticado.
+- **Pós-Condição**: Produto associado à lista de produtos favoritos do comprador em questão.
 
 ## Fluxo Principal
 | Ações do ator | Ações do sistema |
-| :-----------------: | :-----------------: | 
-| 1 - ... | |  
-| | 2 - ... | 
+| :-----------: | :--------------: | 
+| 0 - na visualização dos detalhes de um dado produto, o comprador seleciona a opção de favoritar produto | |  
+| | 1 - o sistema apresenta novamente o detalhamento do produto, com uma mensagem de adição com sucesso aos favoritos | 
 
-## Fluxo Alternativo I - ...
+## Fluxo Alternativo I - Produto não identificado
 | Ações do ator | Ações do sistema |
-| :-----------------: |:-----------------: | 
-| 1.1 - ... | |  
-| | 1.2 - ... |
+| :-----------: | :--------------: |  
+| | 1.1 - o sistema retorna à tela inicial, exibindo um mensagem de produto não identificado |
+| (fluxo finalizado) | |
 
-## Fluxo Alternativo II - ...
+## Fluxo Alternativo II - Produto já adicionado aos favoritos
 | Ações do ator | Ações do sistema |
-| :-----------------: | :-----------------: | 
-| 2.1 - ... | |  
-| | 2.2 - ... |  
+| :-----------: | :--------------: | 
+| | 1.2 - o sistema retorna à tela de detalhamento do produto, com uma mensagem de produto já adicionado aos favoritos |
+| (fluxo finalizado) | |  
 
-> Obs. as seções a seguir apenas serão utilizadas na segunda unidade do PDSWeb (segundo orientações do gerente do projeto).
 
 ## Diagrama de Interação (Sequência ou Comunicação)
 
-> Substituir pela imagem correspondente...
+![Diagrama de Sequência](./imgs/sequencia1_cdu05.png)
 
 ## Diagrama de Classes de Projeto
 
-> Substituir pela imagem contendo as classes (modelo, visão e templates) que implementam o respectivo CDU...
+![Diagrama de Classes de Projeto](./imgs/projeto_cdu05.png)
