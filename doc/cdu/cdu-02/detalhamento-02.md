@@ -1,4 +1,4 @@
-# CDU002. Finalizar compra 
+# CDU 02. Finalizar compra 
 
 - **Ator principal**: Comprador
 - **Atores secundários**: não possui 
@@ -10,7 +10,7 @@
 | Ações do ator | Ações do sistema |
 | :-----------: | :--------------: | 
 | 0 - na visualização dos detalhes do seu carrinho de compras o comprador seleciona a opção de "finalizar a compra" | |  
-| | 1 - o sistema reforça os itens do carrinho de compras, ilustrando valores unitários, quantidades, sub-totais e total geral; informa também os dados para pagamento PIX (chave e QR-Code). O sistema irá destacar que o pedido ficará pendente até que o pagamento correspondente seja identificado |
+| | 1 - o sistema apresenta os detallhes do carrinho de compras e seus itens (valores unitários, quantidades, sub-totais) e total geral; informa também os dados para pagamento via PIX (chave e QR-Code). O sistema irá destacar que o pedido ficará pendente até que o pagamento correspondente seja identificado |
 | 2 - o comprador confirma dos dados apresentados e confirma a compra | |
 | | 3 - o sistema persiste todasa as informações associadas e apresenta os detalhes da compra, com a ênfase no estado da compra "aguardando confirmação de pagamento" | 
 
@@ -34,13 +34,19 @@
 | 2.3 - o comprador responde que "sim", deseja seguir com a compra apenas dos itens com estoque | |
 | | (retorna ao passo 1 do fluxo principal) |
 
+## Fluxo Alternativo IV - Comprador altera a quanbtidade de algum item do carrinho
+| Ações do ator | Ações do sistema |
+| :-----------: | :--------------: | 
+| 2.4 - o comprador altera a quantidade de algum item do carrinho (incrementa de um ou decrementa de um) | |
+| (retorna ao passo 1 do fluxo principal, com o carrinho atualizado) | |
 
-> Obs. as seções a seguir apenas serão utilizadas na segunda unidade do PDSWeb (segundo orientações do gerente do projeto).
 
 ## Diagrama de Interação (Sequência ou Comunicação)
-
-> Substituir pela imagem correspondente...
+### 1ª etapa do Diagrama de Sequência
+![Sequência para o CDU02 - parte 1](./imgs/sequencia1_cdu02.png)
+### 2ª etapa do Diagrama de Sequência
+![Sequência para o CDU02 - parte 2](./imgs/sequencia2_cdu02.png)
 
 ## Diagrama de Classes de Projeto
 
-> Substituir pela imagem contendo as classes (modelo, visão e templates) que implementam o respectivo CDU...
+![Diagrama de Classes de Projeto](./imgs/projeto_cdu02.png)
