@@ -24,3 +24,6 @@
 1. [CDU-16 - Gerenciar usuários](./cdu-16/detalhamento-16.md)
 1. [CDU-17 - Validar cadastro](./cdu-17/detalhamento-17.md)
 
+## 3. Fluxo de Atividades para o processo de Compra de Itens
+
+![Diagrama de Atividades - Compra de Itens](../atividades/compra_de_itens/compra_de_itens.png)
